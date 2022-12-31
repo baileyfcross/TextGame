@@ -46,14 +46,20 @@ public class PopupBox
         while (counter < textWantedCharArray.length){
             for(int i = startingIndex; i < textWanted.length() + startingIndex; i++){
                 boxCharArray[i] = textWantedCharArray[counter];
+                if (i == 377){
+                    
+                                        
+                }
                 counter++;
             }
         }   
-        box = new String(boxCharArray);
+        this.box = new String(boxCharArray);
     }
+    
+    
 
     public String redrawTextBox(){
-        computeTextInsert(box);
-        return box;
+        computeTextInsert(this.box);
+        return this.box;
     }
 }
