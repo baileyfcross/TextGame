@@ -2,6 +2,8 @@
 /**
  * Person is a Person.
  *
+ * Class is Immutable
+ *
  * @author (Bailey Cross)
  * @version (1)
  */
@@ -12,7 +14,7 @@ public class Person
     private int damage;
     private int agility;
     private int handSlots;
-
+    
     /**
      * Constructor for objects of class Person
      * 
@@ -26,5 +28,21 @@ public class Person
         damage = 30;
         agility = 20;
         handSlots = 2;
+    }
+    
+    public int getHealth(){
+        return health;
+    }
+    
+    public int getDamage(){
+        return damage;
+    }
+    
+    public int getAgility(){
+        return agility;
+    }
+    
+    public int getHandSlots(){
+        return handSlots;
     }
 }
