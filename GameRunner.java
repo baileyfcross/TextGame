@@ -29,8 +29,8 @@ public class GameRunner
     
     public static void main (String args[]) {
         Player player1 = new Player();
-        log(Integer.toString(player1.getHealth()));
-        log(Integer.toString(player1.getGold()));
+        //log(Integer.toString(player1.getHealth()));
+        //log(Integer.toString(player1.getGold()));
         drawBox("What's your name?");
         
         Scanner sc = new Scanner(System.in);
@@ -40,9 +40,9 @@ public class GameRunner
         sleep(5000);
         drawBox("Well I suppose we should get to introducin' then");
         sleep(2000);
-        drawBox("My name is Lester");
-        sleep(2000);
-        drawBox("I'm the local sheriff 'round here.");
+        drawBox("The names Lester, I'm the local sheriff 'round here.");
+        //sleep(2000);
+        //drawBox("I'm the local sheriff 'round here.");
         
         
         
