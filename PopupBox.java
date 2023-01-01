@@ -8,7 +8,7 @@ public class PopupBox
 {
     private String textWanted;
     private String box = 
-    """
+        """
          ++++++++++++++++++++++++++++++++++++++++++++++++++++
          +                                                  +
          +                                                  +

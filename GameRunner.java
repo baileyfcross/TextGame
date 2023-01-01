@@ -1,50 +1,31 @@
 import java.util.Scanner;
+import javafx.application.Application;  
+import javafx.scene.Scene;  
+import javafx.scene.layout.StackPane;  
+import javafx.scene.text.Text;  
+import javafx.stage.Stage;  
 /**
  * This is where all of the game logic will be.
  *
  * @author (Bailey Cross)
  * @version (1)
  */
-public class GameRunner
+public class GameRunner extends Application
 {
-    public static void log(String textIn){
-        System.out.println(textIn);
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Text text = new Text();
+        text.setText("Hello Nate!");
+        
+        StackPane root = new StackPane();
+        Scene scene = new Scene(root,600,800);  
+        root.getChildren().add(text);  
+        primaryStage.setScene(scene);  
+        primaryStage.setTitle("TextGame");  
+        primaryStage.show();
     }
     
-    public static void drawBox(String boxIn){
-        String newBox = new PopupBox(boxIn).redrawTextBox();
-        System.out.print(newBox);
-    }
-    
-    private static void sleep(int numberOfSeconds) {
-        try
-        {
-            Thread.sleep(numberOfSeconds);
-        }
-        catch (InterruptedException ie)
-        {
-            ie.printStackTrace();
-        }
-    }
-    
-    public static void main (String args[]) {
-        Player player1 = new Player();
-        //log(Integer.toString(player1.getHealth()));
-        //log(Integer.toString(player1.getGold()));
-        drawBox("What's your name?");
-        
-        Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
-        
-        drawBox("Hello " + name + ", nice to meet you!");
-        sleep(5000);
-        drawBox("Well I suppose we should get to introducin' then");
-        sleep(2000);
-        drawBox("The names Lester, I'm the local sheriff 'round here.");
-        //sleep(2000);
-        //drawBox("I'm the local sheriff 'round here.");
-        
-        
-        
+    public static void main(String[] args){
+        launch(args);
     }
 }
